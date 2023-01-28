@@ -16,7 +16,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             name1 =Console.ReadLine();
 
             Console.WriteLine("Bonjour! \n"
-                + "Veuillez saisir un 2° nom avec son article (ex : Une poelle ou Un string )");
+                + "Veuillez saisir un 2° nom avec son article (ex : Une poelle ou un string )");
             name2 = Console.ReadLine();
 
             Console.WriteLine("Le résultat est : \n" 
