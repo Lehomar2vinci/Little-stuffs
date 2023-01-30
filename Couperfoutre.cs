@@ -25,6 +25,9 @@ namespace MyApp // lol
                 + name1 
                 + " foutre sur " 
                 + name2);
+            
+             Console.WriteLine(" \n"
+                + "Tu est trop fort et c'est la fin du programme. merci d'avoir joué avec ! Au revoir! ");
         }
     }
 }
