@@ -7,7 +7,6 @@ namespace MyApp
         static void Main(string[] args)
         {
 
-
         //initialisation des variables 
             string player1Name;
             string player2Name;
@@ -19,7 +18,9 @@ namespace MyApp
             int player2Attack;
             bool gameOver = false;
             Random rnd = new Random();
-
+        
+            
+        //nommage du joueur 1 
         Console.WriteLine("Bonjour joueur 1 ! \n"
                         + "Quel est ton nom ?");
             player1Name = Console.ReadLine();
@@ -27,7 +28,7 @@ namespace MyApp
                          + player1Name
                          + "\n");
 
-
+        //nommage du joueur 2
             Console.WriteLine("Bonjour joueur 2 ! \n"
                     + "Quel est ton petit nom ?");
             player2Name = Console.ReadLine();
@@ -38,6 +39,7 @@ namespace MyApp
                              + "\n"
                              + "\n");
 
+            //Declaration de classe du j1
             Console.WriteLine(player1Name
                              + " Choisissez votre classe : \n"
                              + "- Pour choisir le Guerrier saisissez 1 \n"
@@ -60,7 +62,8 @@ namespace MyApp
                     + "\n");
             }
 
-
+            //Declaration de classe du j2
+            
             Console.WriteLine( player2Name+ " ,\n "
                     + "- Pour choisir le Guerrier saisissez 1 \n"
                     + "- Pour choisir le Mage saisissez 2");
@@ -95,6 +98,8 @@ namespace MyApp
                 player2HP = 120;
             }
 
+            
+            //while pour le game over
             while (!gameOver)
             {
                 player1Attack = rnd.Next(15, 19);
