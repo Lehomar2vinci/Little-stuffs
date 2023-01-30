@@ -72,7 +72,7 @@ namespace MyApp
             if (player2Choice == 1)
             {
 
-                Console.WriteLine(player2Name +", vous avez choisi la classe Guerrier");
+                Console.WriteLine(player2Name +", vous avez choisi la classe Guerrier.");
                 ;
             }
             else if (player2Choice == 2)
@@ -80,25 +80,17 @@ namespace MyApp
                 Console.WriteLine(player2Name + ", vous avez choisi la classe Mage !");
             }
 
-            if (player1Choice == 1)
+            if (player1Choice == 1 & player2Choice == 1)
             {
                 player1HP = 150;
-            }
-            else
-            {
-                player1HP = 120;
-            }
-
-            if (player2Choice == 1)
-            {
                 player2HP = 150;
             }
             else
             {
+                player1HP = 120;
                 player2HP = 120;
             }
 
-            
             //while pour le game over
             while (!gameOver)
             {
