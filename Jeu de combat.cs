@@ -44,22 +44,20 @@ namespace MyApp
                              + "- Pour choisir le Mage saisissez 2"
                              + "\n");
             player1Choice = int.Parse(Console.ReadLine());
-
             if (player1Choice == 1)
             {
 
-                Console.WriteLine("Vous avez choisi la classe Guerrier très cher "
+                Console.WriteLine("Vous avez choisi la classe Guerrier, très cher "
                     + player1Name);
                 ;
             }
             else if (player1Choice == 2)
             {
-                Console.WriteLine("Vous avez choisi la classe Mage, " 
+                Console.WriteLine("Vous avez choisi la classe Mage, "
                     + player1Name
                     + " ."
                     + "\n");
             }
-
 
             Console.WriteLine( player2Name+ " ,\n "
                     + "- Pour choisir le Guerrier saisissez 1 \n"
@@ -77,24 +75,16 @@ namespace MyApp
                 Console.WriteLine(player2Name + ", vous avez choisi la classe Mage !");
             }
 
-            if (player1Choice == 1)
+            if (player1Choice == 1 & player2Choice == 1)
             {
                 player1HP = 150;
-            }
-            else
-            {
-                player1HP = 120;
-            }
-
-            if (player2Choice == 1)
-            {
                 player2HP = 150;
             }
             else
             {
+                player1HP = 120;
                 player2HP = 120;
             }
-
             while (!gameOver)
             {
                 player1Attack = rnd.Next(15, 19);
@@ -102,12 +92,11 @@ namespace MyApp
                 Console.WriteLine(player1Name 
                     + " attaque et inflige " 
                     + player1Attack 
-                    + " dégâts. "
+                    + " dégâts. \n "
                     + player2Name 
                     +" a " 
                     + player2HP 
-                    + " Points de Vie restants !.");
-
+                    + " Points de Vie restants !");
                 if (player2HP <= 0)
                 {
                     Console.WriteLine(player1Name 
@@ -117,7 +106,6 @@ namespace MyApp
                     gameOver = true;
                     break;
                 }
-
                 player2Attack = rnd.Next(21, 25);
                 player1HP -= player2Attack;
                 Console.WriteLine(player2Name 
@@ -128,17 +116,12 @@ namespace MyApp
                     + "a " 
                     + player1HP 
                     + " PV restants.");
-
                 if (player1HP <= 0)
                 {
                     Console.WriteLine( player2Name 
                     + " a triomphé sur l'adversaire "
                     + player1Name);
                     gameOver = true;
-
-
-
-
 
                 }
             }
