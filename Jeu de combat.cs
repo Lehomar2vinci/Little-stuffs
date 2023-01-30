@@ -17,7 +17,7 @@ namespace MyApp
             int player1Attack;
             int player2Attack;
             
-            //(oui c'est une bool et alors? j'ai dit bool?
+            //(oui c'est une variable bool et alors? j'ai dit bool?
             bool gameOver = false;
             
             //avec la fonction aléatoire
