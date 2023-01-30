@@ -100,17 +100,17 @@ namespace MyApp
                 player1Attack = rnd.Next(15, 19);
                 player2HP -= player1Attack;
                 Console.WriteLine(player1Name 
-                    + " attaque et inflige " 
-                    + player1Attack 
+                    + " attaque et inflige "
+                    + player1Attack
                     + " dégâts. "
-                    + player2Name 
-                    +" a " 
-                    + player2HP 
+                    + player2Name
+                    +" a "
+                    + player2HP
                     + " Points de Vie restants !.");
 
                 if (player2HP <= 0)
                 {
-                    Console.WriteLine(player1Name 
+                    Console.WriteLine(player1Name
                     + " a gagné et a vaincu "
                     + player2Name
                     + " !!!!");
@@ -120,26 +120,21 @@ namespace MyApp
 
                 player2Attack = rnd.Next(21, 25);
                 player1HP -= player2Attack;
-                Console.WriteLine(player2Name 
-                    +" attaque et inflige " 
-                    + player2Attack 
+                Console.WriteLine( player2Name
+                    +" attaque et inflige "
+                    + player2Attack
                     + " dégâts."
-                    + player1Name 
-                    + "a " 
-                    + player1HP 
+                    + player1Name
+                    + "a "
+                    + player1HP
                     + " PV restants.");
 
                 if (player1HP <= 0)
                 {
-                    Console.WriteLine( player2Name 
+                    Console.WriteLine ( player2Name
                     + " a triomphé sur l'adversaire "
                     + player1Name);
                     gameOver = true;
-
-
-
-
-
                 }
             }
         }
