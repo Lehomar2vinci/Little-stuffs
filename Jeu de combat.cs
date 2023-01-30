@@ -17,6 +17,8 @@ namespace MyApp
             int player1Attack;
             int player2Attack;
             bool gameOver = false;
+            
+            //avec la fonction aléatoire
             Random rnd = new Random();
         
             
