@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Security;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace MyApp // lol
 {
     internal class Program
     {
