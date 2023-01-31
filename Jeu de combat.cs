@@ -43,7 +43,7 @@ namespace MyApp
                              + "\n"
                              + "\n");
 
-            //Declaration de classe du j1
+            //Declaration du j1
             Console.WriteLine(player1Name
                              + " Choisissez votre classe : \n"
                              + "- Pour choisir le Guerrier saisissez 1 \n"
@@ -66,7 +66,7 @@ namespace MyApp
                     + "\n");
             }
 
-            //Declaration de classe du j2
+            //Declaration du j2
             
             Console.WriteLine( player2Name+ " ,\n "
                     + "- Pour choisir le Guerrier saisissez 1 \n"
