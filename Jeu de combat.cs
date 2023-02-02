@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-namespace MyApp
+namespace JeudeCombat
 { internal class Program
     {
         static void Main(string[] args)
