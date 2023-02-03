@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net.Security;
 
-namespace MyApp // lol
+namespace Concat // lol
 {
     internal class Program
     {
-        //fait avec amour par Lehomar2vinci aka Nathan Chambrette
+        //fait avec amour par Nathan Chambrette
         static void Main(string[] args)
         {
             string name1;
@@ -14,11 +14,11 @@ namespace MyApp // lol
              while (continueCondition2)
                     { 
                 Console.WriteLine("Bonjour! \n"
-                     + "Veuillez saisir un nom avec son article (ex : Un abruti ou Une lampe )");
+                     + "Veuillez saisir un nom avec son article (ex : une chaussette ou un briquet )");
                 name1 =Console.ReadLine();
 
                 Console.WriteLine(" \n"
-                                + "Tu n'est pas débile. Saisis un 2° nom avec son article (ex : Une poelle ou un string ) : ");
+                                + "Saisis un 2° nom avec son article (ex : Une poelle ou une truelle ) : ");
                 name2 = Console.ReadLine();
 
                 Console.WriteLine("Le résultat est : \n" 
