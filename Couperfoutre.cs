@@ -22,7 +22,7 @@ namespace CouperFoutre // lol
             while (continueCondition1)
             {
 
-                Console.WriteLine("Bienvenu dans ");
+                Console.WriteLine("Bienvenu dans le jeu du ");
 
                 // liste de nom1
 
