@@ -50,7 +50,7 @@ namespace CouperFoutre // lol
         
 
 
-            Console.WriteLine(     "=================================\n"
+                Console.WriteLine(     "=================================\n"
                                  + "|  Voulez-vous continuer ? (O/N) |\n"
                                  + "=================================\n");
                 string reponse1 = Console.ReadLine();
