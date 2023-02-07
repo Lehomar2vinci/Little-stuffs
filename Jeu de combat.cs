@@ -46,7 +46,8 @@ namespace JeudeCombat
             Console.WriteLine(player1Name
                              + " Choisissez votre classe : \n"
                              + "- Pour choisir le Guerrier saisissez 1 \n"
-                             + "- Pour choisir le Mage saisissez 2"
+                             + "- Pour choisir le Mage saisissez 2 \n"
+                             + "- Pour choisir le Magicien saisissez 3"
                              + "\n");
             player1Choice = int.Parse(Console.ReadLine());
             if (player1Choice == 1)
@@ -63,9 +64,12 @@ namespace JeudeCombat
                     + " ."
                     + "\n");
 
+                
                 Console.WriteLine( player2Name+ " ,\n "
                     + "- Pour choisir le Guerrier saisissez 1 \n"
-                    + "- Pour choisir le Mage saisissez 2");
+                    + "- Pour choisir le Mage saisissez 2")
+                    + "- Pour choisir le Magicien saisissez 3"
+                    + "\n");
                 player2Choice = int.Parse(Console.ReadLine());
 
                 if (player2Choice == 1)
@@ -76,17 +80,23 @@ namespace JeudeCombat
                 {
                 Console.WriteLine(player2Name + ", vous avez choisi la classe Mage !");
                 }
+                else if (player2Choice == 3)
+                {
+                Console.WriteLine(player2Name + ", vous avez choisi la classe Mage !");
+                }
                 if (player1Choice == 1 & player2Choice == 1)
                     {
                     player1HP = 150;
                     player2HP = 150;
                     }
-                else
+                else if  (player1Choice == 2 & player2Choice == 2)
                     {
                     player1HP = 120;
                     player2HP = 120;
                     }
-                
+                else {
+                    player1HP = 70;
+                    player2HP = 70;
                 
             //while pour le game over
 
