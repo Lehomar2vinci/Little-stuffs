@@ -23,12 +23,11 @@ namespace JeudeCombat
             //avec la fonction aléatoire
             Random rnd = new Random();
 
-
         //nommage du joueur 1
-        Console.WriteLine("Bonjour joueur 1 ! \n"
+            Console.WriteLine("Bonjour joueur 1 ! \n"
                         + "Quel est ton nom ?");
             player1Name = Console.ReadLine();
-        Console.WriteLine("Le premier joueur s'appelle donc "
+            Console.WriteLine("Le premier joueur s'appelle donc "
                          + player1Name
                          + "\n");
 
@@ -64,77 +63,74 @@ namespace JeudeCombat
                     + " ."
                     + "\n");
 
-            Console.WriteLine( player2Name+ " ,\n "
+                Console.WriteLine( player2Name+ " ,\n "
                     + "- Pour choisir le Guerrier saisissez 1 \n"
                     + "- Pour choisir le Mage saisissez 2");
-            player2Choice = int.Parse(Console.ReadLine());
+                player2Choice = int.Parse(Console.ReadLine());
 
-            if (player2Choice == 1)
-            {
-
+                if (player2Choice == 1)
+                {
                 Console.WriteLine(player2Name +", vous avez choisi la classe Guerrier.");
-                ;
-            }
-            else if (player2Choice == 2)
-            {
+                }
+                else if (player2Choice == 2)
+                {
                 Console.WriteLine(player2Name + ", vous avez choisi la classe Mage !");
-            }
-
-            if (player1Choice == 1 & player2Choice == 1)
-            {
-                player1HP = 150;
-                player2HP = 150;
-            }
-            else
-            {
-                player1HP = 120;
-                player2HP = 120;
-            }
-
+                }
+                if (player1Choice == 1 & player2Choice == 1)
+                    {
+                    player1HP = 150;
+                    player2HP = 150;
+                    }
+                else
+                    {
+                    player1HP = 120;
+                    player2HP = 120;
+                    }
+                
+                
             //while pour le game over
 
-            while (!gameOver)
-            {
-                player1Attack = rnd.Next(15, 19);
-                player2HP -= player1Attack;
-                Console.WriteLine(player1Name
-                    + " attaque et inflige "
-                    + player1Attack
-                    + " dégâts. \n "
-                    + player2Name
-                    +" a "
-                    + player2HP
-                    + " Points de Vie restants !");
-                if (player2HP <= 0)
-                {
+                while (!gameOver)
+                    {
+                    player1Attack = rnd.Next(15, 19);
+                    player2HP -= player1Attack;
                     Console.WriteLine(player1Name
-                    + " a gagné et a vaincu "
-                    + player2Name
-                    + " !!!!");
-                    gameOver = true;
-                    break;
-                }
-                player2Attack = rnd.Next(21, 25);
-                player1HP -= player2Attack;
-                Console.WriteLine( player2Name
-                    +" attaque et inflige "
-                    + player2Attack
-                    + " dégâts."
-                    + player1Name
-                    + "a "
-                    + player1HP
-                    + " PV restants.");
-                if (player1HP <= 0)
-                {
-                    Console.WriteLine ( player2Name
-                    + " a triomphé sur l'adversaire "
-                    + player1Name);
-                    gameOver = true;
-
-
+                            + " attaque et inflige "
+                            + player1Attack
+                            + " dégâts. \n "
+                            + player2Name
+                            +" a "
+                            + player2HP
+                            + " Points de Vie restants !");
+                    if (player2HP <= 0)
+                        {
+                        Console.WriteLine(player1Name
+                        + " a gagné et a vaincu "
+                        + player2Name
+                        + " !!!!");
+                        gameOver = true;
+                        break;
+                        }
+                    player2Attack = rnd.Next(21, 25);
+                    player1HP -= player2Attack;
+                    Console.WriteLine( player2Name
+                        +" attaque et inflige "
+                        + player2Attack
+                        + " dégâts."
+                        + player1Name
+                        + "a "
+                        + player1HP
+                        + " PV restants.");
+                    if (player1HP <= 0)
+                        {
+                        Console.WriteLine ( player2Name
+                        + " a triomphé sur l'adversaire "
+                        + player1Name);
+                        gameOver = true;
+                        }
+            //fin de while
                 }
             }
         }
     }
-}
 }
