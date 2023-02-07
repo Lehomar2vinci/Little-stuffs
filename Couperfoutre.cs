@@ -9,9 +9,7 @@ namespace CouperFoutre // lol
     {
         static void Main(string[] args)
         {
-
             //metre le contenu d'un dictionnaire
-
 
             string name1;
             string name2;
@@ -46,9 +44,6 @@ namespace CouperFoutre // lol
                                   + "\n"
                                   + " foutre sur \n"
                                   + nameListTwo[randomLastNameIndex], "\n");
-            
-        
-
 
                 Console.WriteLine(     "=================================\n"
                                  + "|  Voulez-vous continuer ? (O/N) |\n"
@@ -56,8 +51,6 @@ namespace CouperFoutre // lol
                 string reponse1 = Console.ReadLine();
                 continueCondition1 = (reponse1.ToUpper() == "O");
             }
-
-
 
             //début du jeu 
 
@@ -86,10 +79,11 @@ namespace CouperFoutre // lol
                 continueCondition2 = (reponse2.ToUpper() == "O");
             }
 
+            //fin de la boucle
+            
             Console.WriteLine(" \n"
-                                + "C'est la fin du programme. merci d'avoir joué avec ! Au revoir! ");
-        
-
+                                + "C'est la fin du programme. merci d'avoir joué avec ! Au revoir! \n "
+                             + "-----Nathan Chambrette-----)
         }
     }
 }
