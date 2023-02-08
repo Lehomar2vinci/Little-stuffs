@@ -38,14 +38,14 @@ namespace CouperFoutre // lol
                 int randomFirstNameIndex = rand.Next(nameListOne.Count);
                 int randomLastNameIndex = rand.Next(nameListTwo.Count);
 
-                Console.WriteLine( " \n"
+                Console.WriteLine(  " \n"
                                   + "Couper \n"
                                   + nameListOne[randomFirstNameIndex], "\n"
                                   + "\n"
                                   + " foutre sur \n"
                                   + nameListTwo[randomLastNameIndex], "\n");
 
-                Console.WriteLine(     "=================================\n"
+                Console.WriteLine( "=================================\n"
                                  + "|  Voulez-vous continuer ? (O/N) |\n"
                                  + "=================================\n");
                 string reponse1 = Console.ReadLine();
@@ -56,7 +56,7 @@ namespace CouperFoutre // lol
 
             while (continueCondition2)
                     { 
-                Console.WriteLine("Bonjour! \n"
+                Console.WriteLine("\n"
                                 + "Veuillez saisir un nom avec son article (ex : Un abruti ou Une lampe )");
                 name1 = Console.ReadLine();
 
