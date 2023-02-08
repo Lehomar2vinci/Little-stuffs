@@ -36,8 +36,9 @@ namespace JeuduPendu // Note: actual namespace depends on the project name.
                               "           /___/____/____/____/____/____/____/____/____/| \n" +
                               "          /___/____/____/____/____/____/____/____/____/ | \n" +
                               "          |_|                ***                    |_| | \n" +
-                              "          |_|  Bienvenue dans le jeu du pendu !     |_| / \n" +
-                              "          |_|_______________________________________|_|/  \n");
+                              "          |_|  Bienvenue dans le jeu du pendu !     |_| | \n" +
+                              "          |_|                 *                     |_| | \n" +
+                              "          |_|_______________________________________|_|/ \n");
 
             while (vies > 0)
             {
