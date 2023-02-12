@@ -2,7 +2,7 @@
 
 using System;
 
-namespace cArpeggiator //lol
+namespace leprogrammeJonDuffListe //lol
 {
     internal class Program
     {
