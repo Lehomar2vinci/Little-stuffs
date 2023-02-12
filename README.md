@@ -7,3 +7,4 @@ Des petites créations dont :
 - Un jeu de combat où l'on choisit son nom et sa classe.
 - Un jeu du pendu.
 - Un arpège de do majeur pour console.
+- Une numérotation de skeuds allant de 1 à 48
