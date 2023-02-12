@@ -1,4 +1,4 @@
-// de quoi faire 49 skeuds 
+// de quoi lister 49 skeuds - Nathan Chambrette 
 
 using System;
 
