@@ -8,3 +8,4 @@ Des petites créations dont :
 - Un jeu du pendu.
 - Un arpège de do majeur pour console.
 - Une numérotation de skeuds allant de 1 à 48
+- Un Jeu du serpent de 2 à 4 joueurs !
