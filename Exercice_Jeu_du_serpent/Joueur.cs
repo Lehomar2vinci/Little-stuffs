@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +15,5 @@ namespace Exercice_Jeu_du_serpent
             Nom= nom;
             Position = 1;
         }
-
     }
 }
