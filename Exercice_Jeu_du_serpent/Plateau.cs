@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,10 @@ namespace Exercice_Jeu_du_serpent
     class Plateau
     {
         private int[] cases;
+        private const int caseVide = 0;
+        private const int caseBonus = 1;
+        private const int caseMalus = 2;
+        private const int caseFinale = 3;
 
         public int Taille { get; }
 
@@ -19,52 +24,50 @@ namespace Exercice_Jeu_du_serpent
 
 
             //init des cases bonus et pièges
+            // Décomposer en méthodes ici également
+            // Utiliser la classe De
             Random rand = new Random();
-            int nbCasesBonus = (int)(taille * 0.1);
-            int nbCasesPiege = (int)(taille * 0.1);
+            // Faire qu'une seule variable nbCasesSpeciales
+            int nbCasesBonus = taille / 10;
+            int nbCasesPiege = taille / 10;
+
             for (int i = 0; i< nbCasesBonus; i++) 
             {
                 int position = rand.Next(1, taille + 1);
-                if (cases[position] != 0) 
+                if (cases[position] != caseVide) 
                 {
                     i--;
                 }
                 else
                 {
-                    cases[position] = 1;
+                    cases[position] = caseBonus;
                 }
             }
-        for (int i = 0; i < nbCasesPiege; i++)
+            for (int i = 0; i < nbCasesPiege; i++)
             {
                 int position = rand.Next(1, taille + 1);
-                if (cases[position] != 0)
+                if (cases[position] != caseVide)
                 {
                     i--;
                 }
                 else
                 {
-                    cases[position] = 2;
+                    cases[position] = caseMalus;
                 }
             }
 
             //initialisation de la case finale
-            cases[taille] = 3;
+            cases[taille] = caseFinale;
         }
     
         public int GetCase (int position)
         {
-            if (position < 1)
+            if (position < 1 || position > Taille)
             {
                 return 0;
             }
-            else if (position > Taille) 
-            {
-                return 0;
-            }
-            else 
-            { 
-                return cases[position]; 
-            }  
+
+            return cases[position]; 
         }
 
         public int CalculerNouvellePosition (int position, int de)
@@ -76,7 +79,5 @@ namespace Exercice_Jeu_du_serpent
             }
             return nouvellePosition;
         }
-    
-    
     }
 }
