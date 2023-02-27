@@ -83,7 +83,7 @@ namespace CouperFoutre // lol
             
             Console.WriteLine(" \n"
                                 + "C'est la fin du programme. merci d'avoir joué avec ! Au revoir! \n "
-                             + "-----Nathan Chambrette-----)
+                             + "-----Nathan Chambrette-----";
         }
     }
 }
