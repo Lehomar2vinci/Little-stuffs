@@ -1,6 +1,6 @@
 using System;
 
-namespace c#Arpeggiator //lol
+namespace CSharpArpeggiator //lol
 {
     internal class Program
     {
