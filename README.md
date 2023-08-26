@@ -10,3 +10,4 @@ Des petites créations dont :
 - Une numérotation de skeuds allant de 1 à 48
 - Un Jeu du serpent de 2 à 4 joueurs !
 - Poisson : A little desktop app using dog API showing a random pictur from https://dog.ceo/dog-api/
+- Une animation de cube dansant en python pour Blender utilisant l'interpolation. (Dacing cube)
