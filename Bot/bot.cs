@@ -2,67 +2,57 @@ using System;
 using System.Threading.Tasks;
 using Discord;
 using Discord.WebSocket;
-using Discord.Commands;
 
 class Program
 {
-    private DiscordSocketClient? _client;
-    private readonly string _token = "the token here"; 
-    static void Main(string[] args)
-    {
-        if (args is null)
-        {
-            throw new ArgumentNullException(nameof(args));
-        }
+    private DiscordSocketClient _client;
 
-        new Program().RunBotAsync().GetAwaiter().GetResult();
-    }
-
-    public async Task RunBotAsync()
+    public async Task MainAsync()
     {
         _client = new DiscordSocketClient();
-        _client.Log += Log;
 
-        RegisterCommands();
+        _client.Log += LogAsync;
+        _client.Ready += ReadyAsync;
+        _client.MessageReceived += MessageReceivedAsync;
 
-        await _client.LoginAsync(TokenType.Bot, _token);
-
+        await _client.LoginAsync(TokenType.Bot, "THE TOKEN IS HERE");
         await _client.StartAsync();
 
         await Task.Delay(-1);
     }
 
-    private Task Log(LogMessage arg)
+    private Task LogAsync(LogMessage log)
     {
-        Console.WriteLine(arg);
+        Console.WriteLine(log);
         return Task.CompletedTask;
     }
 
-    private void RegisterCommands()
+    private Task ReadyAsync()
     {
-        _client.MessageReceived += HandleCommandAsync;
+        Console.WriteLine($"{_client.CurrentUser} est connecté !");
+        return Task.CompletedTask;
     }
 
-    private async Task HandleCommandAsync(SocketMessage arg)
+    private async Task MessageReceivedAsync(SocketMessage message)
     {
-        var message = arg as SocketUserMessage;
-        var context = new SocketCommandContext(_client, message);
+        if (message is not SocketUserMessage userMessage)
+            return;
 
-        Console.WriteLine($"Message reçu de {message.Author.Username}: {message.Content}"); // Log pour le débogage
+        if (userMessage.Author.IsBot || message.Author.Id == _client.CurrentUser.Id) return;
 
-        if (message.Author.IsBot) return;
+            string content = userMessage.Content.ToLower();
 
-        if (message.Content.ToLower() == "!random")
+        if (content.Contains("coucou"))
         {
-            Random rand = new();
-            int randomNumber = rand.Next(1, 1000001); // Génère un nombre entre 1 et un million
-            await context.Channel.SendMessageAsync($"Le nombre aléatoire généré est : {randomNumber}");
+            // Remplace "mot-clé" par le mot-clé que tu veux détecter.
+
+            var channel = userMessage.Channel as ISocketMessageChannel;
+            if (channel != null)
+            {
+                await channel.SendMessageAsync("Coucou Aria !");
+            }
         }
     }
+
+    public static void Main(string[] args) => new Program().MainAsync().GetAwaiter().GetResult();
 }
-
-
-
-
-
-
