@@ -1,0 +1,31 @@
+//A code for shadertoy : 
+
+void mainImage( out vec4 fragColor, in vec2 fragCoord )
+{
+    // Normalize absys of pixels for between -1 et 1
+    vec2 uv = (fragCoord - 0.5 * iResolution.xy) / iResolution.y;
+    
+    // Add mobement between 1 and -1
+    float time = iTime * 0.5;
+    
+        // Ondulations with diverses freqs (you can try to change valors)
+    float pattern1 = sin(dot(uv, uv) * cos(time) * 20.0 + time);
+    float pattern2 = cos(length(uv) * 10.0 + time);
+    
+    // Crossing patterns to do effects 
+    float pattern = pattern1 * pattern2;
+        
+    // Base modified color by motive 
+    vec3 color = 0.5 + 0.5 * cos(iTime + uv.xyx + vec3(0,2,4) + pattern);
+    
+    // Saturation and intensity for colour based on Modifying
+    color = color * (0.2 + 0.8 * pattern);
+    
+    // Add a backgound color for reduce contrast and makes more design 
+    vec3 bgColor = vec3(0.1, 0.1, 0.15);
+    color = mix(bgColor, color, pattern);
+    
+    // Color's output
+    fragColor = vec4(color,1.0);
+}
+
