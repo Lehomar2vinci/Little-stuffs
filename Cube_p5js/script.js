@@ -78,9 +78,11 @@ function drawCube() {
 }
 
 function mousePressed() {
-  drag = true;
-  prevMouseX = mouseX;
-  prevMouseY = mouseY;
+  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+    drag = true;
+    prevMouseX = mouseX;
+    prevMouseY = mouseY;
+  }
 }
 
 function mouseReleased() {
