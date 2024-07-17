@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube interactif</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 id="title">Cubic experiment</h1>
+    <div class="controls">
+        <label for="rotationSpeed">Vitesse de rotation</label>
+        <input type="range" id="rotationSpeed" min="0.001" max="0.05" value="0.01" step="0.001" aria-label="Vitesse de rotation">
+        <label for="colorSpeed">Vitesse de transition des couleurs</label>
+        <input type="range" id="colorSpeed" min="0.001" max="0.05" value="0.01" step="0.001" aria-label="Vitesse de transition">
+        <button id="resetCube">Réinitialiser le cube</button>
+    </div>
+</body>
+</html>
