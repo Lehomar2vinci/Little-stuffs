@@ -1,6 +1,7 @@
 using System;
 
-namespace CSharpArpeggiator //lol
+namespace CSharpArpeggiator //lol 
+    // /!\ Works only for Windows !
 {
     internal class Program
     {
