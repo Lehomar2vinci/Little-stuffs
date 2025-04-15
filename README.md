@@ -3,7 +3,7 @@ Some creations
 
 Des petites créations dont :
 Lehomar2vinci-patch-5
-- Couper foutre, une sorte d'Hello Word! en C# utilisant la concaténation avec la saisie utilisateur
+- Couper foutre, une sorte d'Hello World! en C# utilisant la concaténation avec la saisie utilisateur
 - Un jeu de combat où l'on choisit son nom et sa classe
 - Un jeu du pendu
 - Un arpège de do majeur pour console
