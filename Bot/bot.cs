@@ -49,7 +49,7 @@ class Program
             var channel = userMessage.Channel as ISocketMessageChannel;
             if (channel != null)
             {
-                await channel.SendMessageAsync("Coucou Aria !");
+                await channel.SendMessageAsync("Coucou DETECTEDTHING_THIS_IS_BULLSHIT_FOR_THE_MOMENT !");
             }
         }
     }
